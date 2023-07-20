@@ -22,11 +22,6 @@ node 'slave2.puppet' {
         name => httpd,
         ensure => installed,
   }
--> file { 'index.html':
-          ensure => file,
-          path   => "/var/www/html/index.html",
-          source => "/vagrant/slave/index.html"
- }
 -> service {
     'httpd':
         ensure => true,
