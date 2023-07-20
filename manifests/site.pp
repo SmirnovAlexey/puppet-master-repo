@@ -1,13 +1,14 @@
 node 'slave1.puppet' {
   package {
     'apache2':
-        ensure => installed
+        name => httpd,
+        ensure => installed,
   }
 
   service {
     'apache2':
         ensure => true,
         enable => true,
-        require => Package['apache2']
+        require => Package['apache2'],
   }
 }
