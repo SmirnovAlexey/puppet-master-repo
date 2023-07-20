@@ -37,8 +37,4 @@ node 'slave2.puppet' {
         ensure => true,
         enable => true,
   }
-  -> file { 'file1':
-    path => '/tmp/inventory',
-    ensure => absent,
-}
 }
