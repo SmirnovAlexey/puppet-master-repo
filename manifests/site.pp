@@ -24,7 +24,7 @@ node 'slave2.puppet' {
   }
   -> package {
     'php':
-        name => php73,
+        name => php,
         ensure => installed,
   }
 -> file { 'index.php':
