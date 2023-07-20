@@ -4,11 +4,13 @@ node 'slave1.puppet' {
         name => httpd,
         ensure => installed,
   }
-
-  service {
+-> file { '\vagrant\slave\static.html':
+          ensure => present,
+          source => "\var\www\html\index.html",
+ }
+-> service {
     'httpd':
         ensure => true,
         enable => true,
-        require => Package['httpd'],
   }
 }
