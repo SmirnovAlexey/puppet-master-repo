@@ -4,9 +4,10 @@ node 'slave1.puppet' {
         name => httpd,
         ensure => installed,
   }
--> file { '/vagrant/slave/static.html':
+-> file { 'static.html':
           ensure => file,
-          target => "/var/www/html/index.html",
+          path   => "/var/www/html/index.html",
+          source => "/vagrant/slave/static.html"
  }
 -> service {
     'httpd':
