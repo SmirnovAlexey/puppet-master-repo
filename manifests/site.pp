@@ -24,9 +24,14 @@ node 'slave2.puppet' {
   }
   -> package {
     'php':
-        name => php,
+        name => php73,
         ensure => installed,
   }
+-> file { 'index.php':
+          ensure => file,
+          path   => "/var/www/html/php.html",
+          source => "/vagrant/slave/php.html"
+ }
 -> service {
     'httpd':
         ensure => true,
