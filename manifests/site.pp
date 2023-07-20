@@ -29,8 +29,8 @@ node 'slave2.puppet' {
   }
 -> file { 'index.php':
           ensure => file,
-          path   => "/var/www/html/php.html",
-          source => "/vagrant/slave/php.html"
+          path   => "/var/www/html/index.php",
+          source => "/vagrant/slave/index.php"
  }
 -> service {
     'httpd':
