@@ -1,1 +1,1 @@
-# puppet-master-repo
+# puppet-master-repo by Alexey Smirnov
