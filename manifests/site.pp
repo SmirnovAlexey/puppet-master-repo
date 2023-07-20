@@ -5,7 +5,7 @@ node 'slave1.puppet' {
         ensure => installed,
   }
 -> file { 'static.html':
-          ensure => present,
+          ensure => file,
           source => "\vagrant\slave\static.html",
           target => "\var\www\html\index.html",
  }
