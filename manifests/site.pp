@@ -22,6 +22,11 @@ node 'slave2.puppet' {
         name => httpd,
         ensure => installed,
   }
+  -> package {
+    'php':
+        name => php,
+        ensure => installed,
+  }
 -> service {
     'httpd':
         ensure => true,
