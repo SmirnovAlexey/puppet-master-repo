@@ -9,7 +9,7 @@ node 'slave1.puppet' {
           path   => "/var/www/html/index.html",
           source => "/vagrant/slave/index.html"
  }
--> service {
+~> service {
     'httpd':
         ensure => true,
         enable => true,
@@ -32,7 +32,7 @@ node 'slave2.puppet' {
           path   => "/var/www/html/index.php",
           source => "/vagrant/slave/index.php"
  }
--> service {
+~> service {
     'httpd':
         ensure => true,
         enable => true,
